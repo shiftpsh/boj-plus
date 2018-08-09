@@ -1,0 +1,45 @@
+.container {
+    width: 100% !important;
+    padding: 0 64px !important;
+}
+
+.panel-body {
+    font-size: 0;
+    padding: 32px 12px;
+}
+
+.panel-body * {
+    font-size: 1.5rem;
+}
+
+.problem_number {
+    display: inline-block;
+    vertical-align: bottom;
+    text-align: right;
+    width: 5%;
+    line-height: 1.2;
+}
+
+.problem_number:nth-child(200n+201){
+    margin-top: 32px;
+}
+
+
+.problem_title {
+    display: inline-block;
+    vertical-align: bottom;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 1.2;
+    width: 15%;
+	padding-left: 8px;
+}
+
+@media (max-width: 1400px){
+	.panel-body * {
+    	font-size: 1.3rem;
+	}
+    .problem_number {
+    	width: 10%;
+	}
+}

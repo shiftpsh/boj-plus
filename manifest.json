@@ -1,0 +1,62 @@
+  {
+      "name": "BOJ Plus",
+      "version": "1.0",
+      "description": "Baekjoon Online Judge Enhancements",
+      "manifest_version": 2,
+      "author": "shiftpsh",
+      "content_scripts": [{
+          "matches": ["*://*.acmicpc.net/*"],
+          "all_frames": true,
+          "css": ["override-commons.css"],
+          "js": ["content.js"]
+      }, {
+          "matches": [
+              "*://*.acmicpc.net/problemset*",
+              "*://*.acmicpc.net/problem/tag*",
+              "*://*.acmicpc.net/newproblems*"
+          ],
+          "all_frames": true,
+          "css": ["override-problems1.css"]
+      }, {
+          "matches": [
+              "*://*.acmicpc.net/step*",
+              "*://*.acmicpc.net/problem/ranking*"
+          ],
+          "all_frames": true,
+          "css": ["override-problems2.css"]
+      }, {
+          "matches": [
+              "*://*.acmicpc.net/ranklist*",
+              "*://*.acmicpc.net/school/ranklist*",
+              "*://*.acmicpc.net/group/ranklist*",
+              "*://*.acmicpc.net/group/workbook/view*"
+          ],
+          "all_frames": true,
+          "css": ["override-problems2.css"]
+      }, {
+        "matches": [
+            "*://*.acmicpc.net/user*"
+        ],
+        "all_frames": true,
+        "css": ["override-user1.css"]
+    }, {
+        "matches": [
+            "*://*.acmicpc.net/user*"
+        ],
+        "all_frames": true,
+        "css": ["override-user1.css"]
+    }, {
+        "matches": [
+            "*://*.acmicpc.net/status*"
+        ],
+        "all_frames": true,
+        "css": ["override-status.css"]
+    }, {
+        "matches": [
+            "*://*.acmicpc.net/user*",
+            "*://*.acmicpc.net/vs*"
+        ],
+        "all_frames": true,
+        "css": ["override-user2.css"]
+    }]
+  }

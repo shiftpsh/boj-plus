@@ -1,0 +1,78 @@
+a {
+    transition: all .3s ease;
+}
+
+body, input, button, select, textarea, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .purchase span {
+ font-family: "Helvetica Neue", "Noto Sans CJK KR", sans-serif !important;
+}
+
+::selection {
+    background: #ff7784;
+    color: #fff;
+}
+
+h1, .loginbar {
+    font-family: "Gotham", "Helvetica Neue", "Noto Sans CJK KR", sans-serif !important;
+    font-weight: 500;
+}
+
+h2, h3, h4 {
+    font-family: "Gotham", "Helvetica Neue", "Noto Sans CJK KR", sans-serif !important;
+    font-weight: 300;
+}
+
+ul.loginbar li:nth-child(1) a.username:hover {
+    color: white;
+}
+
+.label {
+    display: inline-block;
+    border-radius: 4px !important;
+    line-height: 1.2;
+    padding: 2px 2px;
+}
+
+.label-light-green, .label-purple {
+    display: none;
+}
+
+.pagination li {
+    display: inline-block;
+    width: 6ch;
+}
+
+.pagination li a {
+    width: 100%;
+    text-align: center;
+    padding: 5px 0 !important;
+}
+
+.memory span, .time span {
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+.problem_title:before {
+ 	content: "#";
+    opacity: 0.4;
+}
+
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:hover,
+.nav-pills>li.active>a:focus {
+    color: #fff;
+    background-color: #ff7784;
+}
+.btn-link {
+    color: #222222;
+}
+
+.btn-link:focus,
+.btn-link:hover,
+.btn-link:active {
+    color: #ff7784;
+}
+
+.pace .pace-progress {
+    background: #ff7784;
+}

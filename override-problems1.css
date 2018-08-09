@@ -1,0 +1,3 @@
+table#problemset tr > td:nth-child(n + 4) {
+    text-align: right;
+}

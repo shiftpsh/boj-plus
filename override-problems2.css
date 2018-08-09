@@ -1,0 +1,3 @@
+table.table-striped tr > td:nth-child(n + 5) {
+    text-align: right;
+}
