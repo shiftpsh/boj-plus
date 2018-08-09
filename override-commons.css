@@ -56,23 +56,3 @@ ul.loginbar li:nth-child(1) a.username:hover {
  	content: "#";
     opacity: 0.4;
 }
-
-.nav-pills>li.active>a,
-.nav-pills>li.active>a:hover,
-.nav-pills>li.active>a:focus {
-    color: #fff;
-    background-color: #ff7784;
-}
-.btn-link {
-    color: #222222;
-}
-
-.btn-link:focus,
-.btn-link:hover,
-.btn-link:active {
-    color: #ff7784;
-}
-
-.pace .pace-progress {
-    background: #ff7784;
-}
