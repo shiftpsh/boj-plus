@@ -36,9 +36,9 @@
         },
         {
             "matches": [
-                "*://*.acmicpc.net/ranklist*",
                 "*://*.acmicpc.net/step*",
-                "*://*.acmicpc.net/problem/ranking*"
+                "*://*.acmicpc.net/problem/ranking*",
+                "*://*.acmicpc.net/category/detail*"
             ],
             "all_frames": true,
             "css": [
@@ -47,22 +47,26 @@
         },
         {
             "matches": [
+                "*://*.acmicpc.net/ranklist*",
                 "*://*.acmicpc.net/school/ranklist*",
                 "*://*.acmicpc.net/group/ranklist*",
                 "*://*.acmicpc.net/group/workbook/view*"
             ],
             "all_frames": true,
             "css": [
-                "override-problems2.css"
+                "override-problems3.css"
             ]
         },
         {
             "matches": [
-                "*://*.acmicpc.net/user*"
+                "*://*.acmicpc.net/category*"
+            ],
+            "exclude_globs": [
+                "*://*.acmicpc.net/category/detail*"
             ],
             "all_frames": true,
             "css": [
-                "override-user1.css"
+                "override-problems4.css"
             ]
         },
         {
