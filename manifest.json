@@ -6,6 +6,7 @@
     "author": "shiftpsh",
     "permissions": [
         "*://*.acmicpc.net/*",
+        "*://koosaga.oj.uz/*",
         "tabs"
     ],
     "content_scripts": [

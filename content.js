@@ -62,24 +62,38 @@ userLinks
         return item.getAttribute("href").startsWith("/user/")
     })
     .forEach(function (item, index) {
+        const user = item.getAttribute("href").split("/")[2];
+
         getDom("https://www.acmicpc.net" + item.getAttribute("href"), function (dom) {
-            const statics = dom.querySelector("table#statics");
-            const rank = statics.querySelector("td").innerHTML;
-            const percent = rank / leastRank * 100;
+            getJson("https://koosaga.oj.uz/api/user?q=[\"" + user + "\"]", function (json) {
+                const statics = dom.querySelector("table#statics");
+                const bojRank = statics.querySelector("td").innerHTML;
+                const bojPercent = bojRank / leastRank * 100;
+                const koosagaRank = json.result[0].ranking;
+                const koosagaPercent = koosagaRank / leastRank * 100;
 
-            item.setAttribute("rel", "tooltip");
-            item.setAttribute("data-placement", "right");
-            item.setAttribute("data-html", "true");
-            item.setAttribute("class", "tooltip-click");
-            item.setAttribute("title", "<b>#" + rank + "</b> (상위 " + formatPercentage(percent) + "%)");
+                item.setAttribute("rel", "tooltip");
+                item.setAttribute("data-placement", "right");
+                item.setAttribute("data-html", "true");
+                item.setAttribute("class", "tooltip-click");
+                item.setAttribute("title",
+                    "<table style=\"text-align:left; border-spacing: 4px; border-collapse: separate;\">" +
+                        "<tr>" +
+                            "<td>BOJ </td><td><b>#" + bojRank + "</b></td><td> (상위 " + formatPercentage(bojPercent) + "%)</td>" +
+                        "</tr>" +
+                        "<tr>" +
+                            "<td>koosaga.oj.uz </td><td><b>#" + koosagaRank + "</b></td><td> (상위 " + formatPercentage(koosagaPercent) + "%)</td>" +
+                        "</tr>" +
+                    "</table>");
 
-            $("[rel=tooltip]").tooltip();
-            $("[rel=tooltip]").click(function () {
-                if ($(this).hasClass('tooltip-click')) {
-                    return true;
-                } else {
-                    return false;
-                }
+                $("[rel=tooltip]").tooltip();
+                $("[rel=tooltip]").click(function () {
+                    if ($(this).hasClass('tooltip-click')) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                });
             });
         });
     })
