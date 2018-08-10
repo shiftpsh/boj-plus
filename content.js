@@ -59,7 +59,7 @@ var userLinks = document.getElementsByTagName("a");
 userLinks = [].slice.call(userLinks, 0);
 userLinks
     .filter(function (item) {
-        return item.getAttribute("href").startsWith("/user/")
+        return item.getAttribute("href") && item.getAttribute("href").startsWith("/user/")
     })
     .forEach(function (item, index) {
         const user = item.getAttribute("href").split("/")[2];
@@ -82,7 +82,7 @@ userLinks
                             "<td>BOJ </td><td><b>#" + bojRank + "</b></td><td> (상위 " + formatPercentage(bojPercent) + "%)</td>" +
                         "</tr>" +
                         "<tr>" +
-                            "<td>koosaga.oj.uz </td><td><b>#" + koosagaRank + "</b></td><td> (상위 " + formatPercentage(koosagaPercent) + "%)</td>" +
+                            "<td>Tier </td><td><b>#" + koosagaRank + "</b></td><td> (상위 " + formatPercentage(koosagaPercent) + "%)</td>" +
                         "</tr>" +
                     "</table>");
 
