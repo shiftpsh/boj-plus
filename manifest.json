@@ -36,6 +36,7 @@
         },
         {
             "matches": [
+                "*://*.acmicpc.net/ranklist*",
                 "*://*.acmicpc.net/step*",
                 "*://*.acmicpc.net/problem/ranking*"
             ],
@@ -46,7 +47,6 @@
         },
         {
             "matches": [
-                "*://*.acmicpc.net/ranklist*",
                 "*://*.acmicpc.net/school/ranklist*",
                 "*://*.acmicpc.net/group/ranklist*",
                 "*://*.acmicpc.net/group/workbook/view*"
