@@ -45,8 +45,9 @@ userLinks
 
             item.setAttribute("rel", "tooltip");
             item.setAttribute("data-placement", "right");
+            item.setAttribute("data-html", "true");
             item.setAttribute("class", "tooltip-click");
-            item.setAttribute("title", "#" + rank);
+            item.setAttribute("title", "<b>#" + rank + "</b> (상위 " + "%)");
 
             $("[rel=tooltip]").tooltip();
             $("[rel=tooltip]").click(function () {
