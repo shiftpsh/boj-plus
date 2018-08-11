@@ -37,8 +37,8 @@ ul.loginbar li:nth-child(1) a.username:hover {
 }
 
 .pagination li {
-    display: inline-block;
-    width: 6ch;
+    display: inline-block !important;
+    width: 6ch !important;
 }
 
 .pagination li a {
