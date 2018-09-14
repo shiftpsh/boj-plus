@@ -67,7 +67,8 @@ userLinks
         getDom("https://www.acmicpc.net" + item.getAttribute("href"), function (dom) {
             getJson("https://koosaga.oj.uz/api/user?q=[\"" + user + "\"]", function (json) {
                 const statics = dom.querySelector("table#statics");
-                const bojRank = statics.querySelector("td").innerHTML;
+                const solved = statics.querySelector("tr:nth-child(2) td").innerText;
+                const bojRank = statics.querySelector("tr:nth-child(1) td").innerText;
                 const bojPercent = bojRank / leastRank * 100;
                 const koosagaRank = json.result[0].ranking;
                 const koosagaPercent = koosagaRank / leastRank * 100;
@@ -78,6 +79,9 @@ userLinks
                 item.setAttribute("class", "tooltip-click");
                 item.setAttribute("title",
                     "<table style=\"text-align:left; border-spacing: 4px; border-collapse: separate;\">" +
+                        "<tr>" +
+                            "<td>Solved </td><td><b>" + solved + "</b></td><td></td>" +
+                        "</tr>" +
                         "<tr>" +
                             "<td>BOJ </td><td><b>#" + bojRank + "</b></td><td> (상위 " + formatPercentage(bojPercent) + "%)</td>" +
                         "</tr>" +
