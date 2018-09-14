@@ -98,3 +98,4 @@ userLinks
         });
     })
 
+    $('.dropdown-toggle').dropdown();
