@@ -103,6 +103,15 @@
             "css": [
                 "override-user2.css"
             ]
+        },
+        {
+            "matches": [
+                "*://*.acmicpc.net/achievements*"
+            ],
+            "all_frames": true,
+            "js": [
+                "achievement_page.js"
+            ]
         }
     ]
 }

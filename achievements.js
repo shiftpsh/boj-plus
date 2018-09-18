@@ -1,6 +1,8 @@
-const navigation = document.querySelector("ul.nav.navbar-nav");
+const navigation = document.querySelector("ul.loginbar");
 const achievementLi = document.createElement("LI");  
 achievementLi.innerHTML = "<a href=\"/achievements\">도전과제</a>";
+const dividerLi = document.createElement("LI");
+dividerLi.className = "topbar-devider";
 
-// Not working
-navigation.insertBefore(achievementLi, navigation.childNodes[2]);
+navigation.insertBefore(achievementLi, navigation.childNodes[4]);
+navigation.insertBefore(dividerLi, navigation.childNodes[5]);
