@@ -15,6 +15,9 @@
         "*://koosaga.oj.uz/*",
         "tabs"
     ],
+    "web_accessible_resources": [
+        "svg/*.svg"
+    ],
     "content_scripts": [{
             "matches": [
                 "*://*.acmicpc.net/*"
