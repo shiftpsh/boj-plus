@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 a {
     transition: all .3s ease;
 }
 
 body, input, button, select, textarea, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .purchase span {
- font-family: "Helvetica Neue", "Noto Sans CJK KR", sans-serif !important;
+ font-family: "Helvetica Neue", "Open Sans", "Noto Sans CJK KR", sans-serif !important;
 }
 
 ::selection {
@@ -12,12 +14,12 @@ body, input, button, select, textarea, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, 
 }
 
 h1, .loginbar {
-    font-family: "Gotham", "Helvetica Neue", "Noto Sans CJK KR", sans-serif !important;
+    font-family: "Gotham", "Montserrat", "Helvetica Neue", "Noto Sans CJK KR", sans-serif !important;
     font-weight: 500;
 }
 
 h2, h3, h4 {
-    font-family: "Gotham", "Helvetica Neue", "Noto Sans CJK KR", sans-serif !important;
+    font-family: "Gotham", "Montserrat", "Helvetica Neue", "Noto Sans CJK KR", sans-serif !important;
     font-weight: 300;
 }
 
