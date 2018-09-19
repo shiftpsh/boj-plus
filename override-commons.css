@@ -34,7 +34,8 @@ ul.loginbar li:nth-child(1) a.username:hover {
     padding: 2px 2px;
 }
 
-.label-light-green, .label-purple {
+.label-light-green,
+.label-purple {
     display: none;
 }
 
@@ -49,12 +50,49 @@ ul.loginbar li:nth-child(1) a.username:hover {
     padding: 5px 0 !important;
 }
 
-.memory span, .time span {
+.memory span,
+.time span {
     font-size: 0.7em;
     font-weight: bold;
 }
 
 .problem_title:before {
- 	content: "#";
+    content: "#";
     opacity: 0.4;
+}
+
+.achievement-count {
+    position: relative;
+    display: inline-block;
+    font-size: .8em;
+    height: 32px;
+    line-height: 24px;
+    min-width: 64px;
+    border-radius: 4px !important;
+    padding: 4px;
+    padding-left: 32px;
+    text-align: center;
+}
+
+.achievement-count img {
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    top: 8px;
+    left: 8px;
+}
+
+.achievement-count.bronze {
+    border: 1px solid #b56d3c;
+    background-color: #f5ebe4;
+}
+
+.achievement-count.silver {
+    border: 1px solid #a0a5a8;
+    background-color: #f0f0f0;
+}
+
+.achievement-count.gold {
+    border: 1px solid #f9d70d;
+    background-color: #fdf9e4;
 }

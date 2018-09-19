@@ -15,6 +15,9 @@
         "*://koosaga.oj.uz/*",
         "tabs"
     ],
+    "web_accessible_resources": [
+        "svg/*.svg"
+    ],
     "content_scripts": [{
             "matches": [
                 "*://*.acmicpc.net/*"
@@ -26,7 +29,8 @@
             "js": [
                 "3rdparty/jquery.3.3.1.min.js",
                 "3rdparty/bootstrap.3.2.0.min.js",
-                "content.js"
+                "content.js",
+                "achievements.js"
             ]
         },
         {
@@ -101,6 +105,15 @@
             "all_frames": true,
             "css": [
                 "override-user2.css"
+            ]
+        },
+        {
+            "matches": [
+                "*://*.acmicpc.net/achievements*"
+            ],
+            "all_frames": true,
+            "js": [
+                "achievement_page.js"
             ]
         }
     ]
