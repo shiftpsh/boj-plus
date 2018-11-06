@@ -14,6 +14,7 @@ function getJson(url, callback) {
     };
     request.send();
 }
+
 function getDom(url, callback) {
     var request = new XMLHttpRequest();
     request.open('GET', url, true);
@@ -31,6 +32,7 @@ function getDom(url, callback) {
     };
     request.send();
 }
+
 function formatPercentage(x) {
     if (x > 100) {
         return "100.0";
@@ -65,41 +67,34 @@ userLinks
         const user = item.getAttribute("href").split("/")[2];
 
         getDom("https://www.acmicpc.net" + item.getAttribute("href"), function (dom) {
-            getJson("https://koosaga.oj.uz/api/user?q=[\"" + user + "\"]", function (json) {
-                const statics = dom.querySelector("table#statics");
-                const solved = statics.querySelector("tr:nth-child(2) td").innerText;
-                const bojRank = statics.querySelector("tr:nth-child(1) td").innerText;
-                const bojPercent = bojRank / leastRank * 100;
-                const koosagaRank = json.result[0].ranking;
-                const koosagaPercent = koosagaRank / leastRank * 100;
+            const statics = dom.querySelector("table#statics");
+            const solved = statics.querySelector("tr:nth-child(2) td").innerText;
+            const bojRank = statics.querySelector("tr:nth-child(1) td").innerText;
+            const bojPercent = bojRank / leastRank * 100;
 
-                item.setAttribute("rel", "tooltip");
-                item.setAttribute("data-placement", "right");
-                item.setAttribute("data-html", "true");
-                item.setAttribute("class", "tooltip-click");
-                item.setAttribute("title",
-                    "<table style=\"text-align:left; border-spacing: 4px; border-collapse: separate;\">" +
-                        "<tr>" +
-                            "<td>Solved </td><td><b>" + solved + "</b></td><td></td>" +
-                        "</tr>" +
-                        "<tr>" +
-                            "<td>BOJ </td><td><b>#" + bojRank + "</b></td><td> (상위 " + formatPercentage(bojPercent) + "%)</td>" +
-                        "</tr>" +
-                        "<tr>" +
-                            "<td>Tier </td><td><b>#" + koosagaRank + "</b></td><td> (상위 " + formatPercentage(koosagaPercent) + "%)</td>" +
-                        "</tr>" +
-                    "</table>");
+            item.setAttribute("rel", "tooltip");
+            item.setAttribute("data-placement", "right");
+            item.setAttribute("data-html", "true");
+            item.setAttribute("class", "tooltip-click");
+            item.setAttribute("title",
+                "<table style=\"text-align:left; border-spacing: 4px; border-collapse: separate;\">" +
+                "<tr>" +
+                "<td>Solved </td><td><b>" + solved + "</b></td><td></td>" +
+                "</tr>" +
+                "<tr>" +
+                "<td>BOJ </td><td><b>#" + bojRank + "</b></td><td> (상위 " + formatPercentage(bojPercent) + "%)</td>" +
+                "</tr>" +
+                "</table>");
 
-                $("[rel=tooltip]").tooltip();
-                $("[rel=tooltip]").click(function () {
-                    if ($(this).hasClass('tooltip-click')) {
-                        return true;
-                    } else {
-                        return false;
-                    }
-                });
+            $("[rel=tooltip]").tooltip();
+            $("[rel=tooltip]").click(function () {
+                if ($(this).hasClass('tooltip-click')) {
+                    return true;
+                } else {
+                    return false;
+                }
             });
         });
     })
 
-    $('.dropdown-toggle').dropdown();
+$('.dropdown-toggle').dropdown();

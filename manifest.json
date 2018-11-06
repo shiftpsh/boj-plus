@@ -1,6 +1,6 @@
 {
     "name": "BOJ Plus",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "description": "Baekjoon Online Judge Enhancements",
     "manifest_version": 2,
     "author": "shiftpsh",
@@ -13,107 +13,23 @@
     "permissions": [
         "*://*.acmicpc.net/*",
         "*://koosaga.oj.uz/*",
-        "tabs"
+        "tabs",
+        "activeTab"
     ],
     "web_accessible_resources": [
-        "svg/*.svg"
+        "svg/*.svg",
+        "css/*.css"
     ],
     "content_scripts": [{
             "matches": [
                 "*://*.acmicpc.net/*"
             ],
             "all_frames": true,
-            "css": [
-                "override-commons.css"
-            ],
             "js": [
                 "3rdparty/jquery.3.3.1.min.js",
                 "3rdparty/bootstrap.3.2.0.min.js",
                 "content.js",
-                "achievements.js"
-            ]
-        },
-        {
-            "matches": [
-                "*://*.acmicpc.net/problemset*",
-                "*://*.acmicpc.net/problem/tag*",
-                "*://*.acmicpc.net/newproblems*"
-            ],
-            "all_frames": true,
-            "css": [
-                "override-problems1.css"
-            ]
-        },
-        {
-            "matches": [
-                "*://*.acmicpc.net/step*",
-                "*://*.acmicpc.net/problem/ranking*",
-                "*://*.acmicpc.net/category/detail*"
-            ],
-            "all_frames": true,
-            "css": [
-                "override-problems2.css"
-            ]
-        },
-        {
-            "matches": [
-                "*://*.acmicpc.net/ranklist*",
-                "*://*.acmicpc.net/school/ranklist*",
-                "*://*.acmicpc.net/group/ranklist*",
-                "*://*.acmicpc.net/group/workbook/view*"
-            ],
-            "all_frames": true,
-            "css": [
-                "override-problems3.css"
-            ]
-        },
-        {
-            "matches": [
-                "*://*.acmicpc.net/category*"
-            ],
-            "exclude_globs": [
-                "*://*.acmicpc.net/category/detail*"
-            ],
-            "all_frames": true,
-            "css": [
-                "override-problems4.css"
-            ]
-        },
-        {
-            "matches": [
-                "*://*.acmicpc.net/user*"
-            ],
-            "all_frames": true,
-            "css": [
-                "override-user1.css"
-            ]
-        },
-        {
-            "matches": [
-                "*://*.acmicpc.net/status*"
-            ],
-            "all_frames": true,
-            "css": [
-                "override-status.css"
-            ]
-        },
-        {
-            "matches": [
-                "*://*.acmicpc.net/user*",
-                "*://*.acmicpc.net/vs*"
-            ],
-            "all_frames": true,
-            "css": [
-                "override-user2.css"
-            ]
-        },
-        {
-            "matches": [
-                "*://*.acmicpc.net/achievements*"
-            ],
-            "all_frames": true,
-            "js": [
-                "achievement_page.js"
+                "inject_stylesheet.js"
             ]
         }
     ]
