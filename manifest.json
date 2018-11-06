@@ -13,8 +13,7 @@
     "permissions": [
         "*://*.acmicpc.net/*",
         "*://koosaga.oj.uz/*",
-        "tabs",
-        "activeTab"
+        "tabs"
     ],
     "web_accessible_resources": [
         "svg/*.svg",
