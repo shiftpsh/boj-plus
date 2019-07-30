@@ -30,7 +30,8 @@ ul.loginbar li:nth-child(1) a.username:hover {
 .label {
     display: inline-block;
     border-radius: 4px !important;
-    line-height: 1.2;
+	line-height: 1.2;
+	vertical-align: middle;
     padding: 2px 2px;
 }
 
